@@ -135,7 +135,7 @@ py_script_button = tk.Button(py_script_frame, text="Browse", command=select_main
 
 ## Instructions box
 instructions_frame = tk.Frame(window); instructions_frame.grid(row=2, column=0, columnspan=5)
-instructions_label = tk.Label(instructions_frame, text="Read instructions:").grid(row=0, column=0)
+instructions_label = tk.Label(instructions_frame, text="    Read instructions:").grid(row=0, column=0) # Hack to center text
 textbox = tk.Text(instructions_frame, width=98, height=32)
 scroll = tk.Scrollbar(instructions_frame, command=textbox.yview); scroll.grid(row=1, column=1, sticky="ns")
 textbox.configure(state="normal", wrap="word", font=("Arial", 10), yscrollcommand=scroll.set); textbox.grid(row=1, column=0)
